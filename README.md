@@ -1,8 +1,8 @@
 # melancholia
 
 ## install required stuff
-`pip install -r requirements.txt`
-install [puredata](http://msp.ucsd.edu/software.html)
+- install [puredata](http://msp.ucsd.edu/software.html)
+- `pip install -r requirements.txt`
 
 ## usage of simple:
 1. open the puredata patch
