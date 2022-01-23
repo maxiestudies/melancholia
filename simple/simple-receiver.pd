@@ -1,0 +1,14 @@
+#N canvas 1926 109 1908 1985 12;
+#X obj 290 174 oscparse;
+#X obj 290 146 netreceive -u -b;
+#X obj 290 260 print;
+#X msg 290 117 listen 8765;
+#X obj 290 232 route send;
+#X obj 290 203 list trim;
+#X obj 290 87 loadbang;
+#X connect 0 0 5 0;
+#X connect 1 0 0 0;
+#X connect 3 0 1 0;
+#X connect 4 0 2 0;
+#X connect 5 0 4 0;
+#X connect 6 0 3 0;
