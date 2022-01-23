@@ -1,5 +1,8 @@
 # melancholia
 
+## install required libraries
+`pip install -r requirements.txt`
+
 ## usage of simple:
 open the puredata patch
 call the python script with `python simple-client.py <some string>`
