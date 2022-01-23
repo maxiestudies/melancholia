@@ -1,14 +1,15 @@
 # melancholia
 
-## install required libraries
+## install required stuff
 `pip install -r requirements.txt`
+install [puredata](http://msp.ucsd.edu/software.html)
 
 ## usage of simple:
-open the puredata patch
-call the python script with `python simple-client.py <some string>`
-see how the string was printed in puredata's console
+1. open the puredata patch
+2. call the python script with `python simple-client.py <some string>`
+3. see how the string was printed in puredata's console
 
 ## usage of oscillator:
-open the oscillator-receiver puredata patch
-call the python script without arguments `python oscillator-client.py`
-the slider will bounce back and forth until the script is interrupted
+1. open the oscillator-receiver puredata patch
+2. call the python script without arguments `python oscillator-client.py`
+3. the slider will bounce back and forth until the script is interrupted
