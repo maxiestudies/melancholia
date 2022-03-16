@@ -1,0 +1,28 @@
+#N canvas 960 22 956 1000 12;
+#X msg 111 106 listen 7899;
+#X obj 111 133 netreceive -u -b;
+#X obj 111 161 oscparse;
+#X obj 111 186 list trim;
+#X obj 111 211 route button sensor;
+#X obj 110 280 route one two;
+#X obj 260 285 route one two;
+#X floatatom 257 322 5 0 0 0 - - - 0;
+#X floatatom 309 321 5 0 0 0 - - - 0;
+#X obj 102 327 sel 1;
+#X obj 158 327 sel 1;
+#X obj 91 367 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 165 367 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 4 1 6 0;
+#X connect 5 0 9 0;
+#X connect 5 1 10 0;
+#X connect 6 0 7 0;
+#X connect 6 1 8 0;
+#X connect 9 0 11 0;
+#X connect 10 0 12 0;
