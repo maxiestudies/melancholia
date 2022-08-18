@@ -1,0 +1,49 @@
+#+DATE: Thu 18 Aug 2022 17:42:24 CEST
+* Electronics setup
+** Software
+*** Reaper audio
+**** App music
+this loops while the audience enters in the room.
+cue to continue (in Bregenz) was to change to the next piece when Jakdish was on stage
+to change to the next piece: go to the next tab, start the playback and jump back to the app music project and fade it out with the master
+**** Anatomy
+at the end of anatomy the rain is looped for variable stage change time. Continue by removing the loop and letting the piece fade out when Dietmar is on position
+**** Daisy Daisy
+the piece has a fermata on Number 6 (the marker has the name !1008 to trigger the pause automatically). Continue when Dietmar shouts "die!" (see score)
+**** Brunella
+no electronics (also not on the score)
+**** Planet Norn
+the project also contains transit-duo, Zidane and tubamirum
+there is a loop marked as a region at the beginning of transit-duo. Continue by removing the loop when Chrisitan is on position
+**** Transit Duo-Zidane-Tuba Mirum
+see Planet norn
+**** Nekropolis
+start when Paul is ready to start
+**** Winter scene
+start when Megumi is ready to start
+**** Lullaby for an unborn
+Sava improvises at the beginning, start the click when musically tells you to
+*** Reaper ds-100
+for each piece there is a corresponding reaper project that takes care of the ds-100 automation. The project have the same measure/tempo raster that the project that plays the audio.
+**** Puredata osc filter TODO: this should probably be redone
+the synchronization of both projects is done via Reaper and puredata. the Audio-Reaper sends osc automation to a pd patch on the second computer.
+The patch does some filtering/intelligence and controlls the playback of the second reaper project for the automation
+the project tab change on the ds-100 projects is done automatically
+you should see both projects at the same time during performance just in case
+the ds-100 project gets an /time osc message whenever a marker is crossed on the first project for synchronization purposes
+*** Puredata video sync
+the patch melancholia.pd receives midi notes and packs it as osc messages for the video team.
+The cue list can be found here https://docs.google.com/spreadsheets/d/19ly_C_0Sfr6VgYD3924BxGsi93MtSQy2LgewyCriaoA/edit#gid=0
+*** Light sync
+the light desk gets midi notes directly from the reaper project on the corresponding channel.
+The cue list can be found here https://docs.google.com/spreadsheets/d/162Dr1qcejBB0tvSaFGHF999zxZnvQtKmC_uust5Y7AI/edit#gid=670524750
+*** Sensors
+the two raspberry pis start automatically and send osc messages to 192.168.0.172
+ 
+** Hardware
+- mbp4 (primary) and mbp3 (secondary) MacBookPro's from EM
+- RME Madiface Pro (primary) and RME Madiface USB (secondary)
+- Midilink MIDI interface for connecting to the mixing desk
+- Mac Mini (belongs to Banu from d&b) for the ds-100 Reaper Projects
+- small Netgear switch for network connectivity
+- two raspberry pi
