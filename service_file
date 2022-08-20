@@ -1,0 +1,15 @@
+[Unit]
+Description=Load sensor read script
+After=network.target
+
+[Service]
+ExecStart=/bin/python3 /home/pi/read_mpu.py
+WorkingDirectory=/home/pi/
+StandardOutput=file:/home/pi/sensor.log
+StandardError=inherit
+Restart=always
+RestartSec=2
+User=pi
+
+[Install]
+WantedBy=multi-user.target
