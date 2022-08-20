@@ -13,3 +13,9 @@
 1. open the oscillator-receiver puredata patch
 2. call the python script without arguments `python oscillator-client.py`
 3. the slider will bounce back and forth until the script is interrupted
+
+## System Diagram
+[system diagram](https://github.com/maxiestudies/melancholia/blob/master/docs/system_diagram.png)
+
+## Description of the pieces
+[org file](https://github.com/maxiestudies/melancholia/blob/master/docs/doc.org)
