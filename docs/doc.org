@@ -28,17 +28,19 @@ for each piece there is a corresponding reaper project that takes care of the ds
 **** Puredata osc filter TODO: this should probably be redone
 the synchronization of both projects is done via Reaper and puredata. the Audio-Reaper sends osc automation to a pd patch on the second computer.
 The patch does some filtering/intelligence and controlls the playback of the second reaper project for the automation
-the project tab change on the ds-100 projects is done automatically
+the project tab change on the ds-100 projects is done automatically. The order of the project tabs is very important, the puredata patch sends absolute tab values to reaper
 you should see both projects at the same time during performance just in case
 the ds-100 project gets an /time osc message whenever a marker is crossed on the first project for synchronization purposes
 *** Puredata video sync
 the patch melancholia.pd receives midi notes and packs it as osc messages for the video team.
 The cue list can be found here https://docs.google.com/spreadsheets/d/19ly_C_0Sfr6VgYD3924BxGsi93MtSQy2LgewyCriaoA/edit#gid=0
+the patch also sends start and stop commands for the ping-pong game over osc on port 7899
 *** Light sync
 the light desk gets midi notes directly from the reaper project on the corresponding channel.
 The cue list can be found here https://docs.google.com/spreadsheets/d/162Dr1qcejBB0tvSaFGHF999zxZnvQtKmC_uust5Y7AI/edit#gid=670524750
 *** Sensors
-the two raspberry pis start automatically and send osc messages to 192.168.0.172
+the two raspberry pis start automatically and send osc messages to 192.168.0.172:7899
+this is acheived via a python script that reads the sensor information and sends it as osc packets and a systemd service file that starts the scrip on boot (both in github)
  
 ** Hardware
 - mbp4 (primary) and mbp3 (secondary) MacBookPro's from EM
